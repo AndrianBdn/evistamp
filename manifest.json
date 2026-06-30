@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "evistamp",
+  "version": "1.0.0",
+  "description": "Click the toolbar button to stamp a centered UTC timestamp on the page for evidence screenshots.",
+  "action": {
+    "default_title": "Stamp UTC timestamp (click again to remove)"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["activeTab", "scripting"]
+}
