@@ -11,6 +11,9 @@ screenshots (e.g. for ISO audits or compliance records).
 - Page content is pushed down so the band never covers what you're capturing
 - Lands in the shot for both full-window grabs *and* in-page/viewport captures,
   since the stamp is part of the rendered page
+- **Click the band** to pick a color scheme — Chrome's own customize-chrome
+  palette (Blue, Teal, Midnight Blue, Green, …) so the stamp can match your
+  browser's chrome color. Your choice is saved and reused on every page.
 
 > Not published on the Chrome Web Store — install manually (load unpacked) below.
 
@@ -27,10 +30,12 @@ screenshots (e.g. for ISO audits or compliance records).
 - `background.js` listens for the toolbar button click and injects `content.js` into
   the active tab via `chrome.scripting`.
 - `content.js` adds (or, on a second click, removes) the fixed timestamp band and
-  pushes the page down by its height.
-- Permissions are limited to `activeTab` + `scripting`: the extension can only touch
-  a page at the moment you click its button — it has no background access to your
-  browsing.
+  pushes the page down by its height. Clicking the band opens the color-scheme
+  picker; the chosen scheme is persisted with `chrome.storage.local` and the band's
+  text/rule colors auto-adapt to light vs. dark backgrounds for legibility.
+- Permissions are limited to `activeTab` + `scripting` + `storage`: the extension can
+  only touch a page at the moment you click its button (no background access to your
+  browsing); `storage` just remembers your chosen color scheme.
 
 ## Notes / known limits
 
