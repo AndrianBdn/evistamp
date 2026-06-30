@@ -4,6 +4,8 @@ A minimal Chrome extension that stamps a clean, document-style **UTC timestamp b
 across the top of the current page — on demand — so it's captured in evidence
 screenshots (e.g. for ISO audits or compliance records).
 
+![evistamp stamping a GitHub page with a UTC timestamp band, color-matched to the browser chrome](docs/screenshot.webp)
+
 - Click the toolbar button to stamp the page; click again to remove it
 - Strict ISO 8601, UTC, second precision, frozen at click: `2026-07-01T13:02:47Z`
 - Rendered as a formal exhibit-style band: near-white, ink-navy tabular monospace,
